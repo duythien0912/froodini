@@ -1,0 +1,123 @@
+{ 
+    "_id" : ObjectId("5b2fbdff21bf6236c46b5586"), 
+    "linkEvent" : "http://localhost:3000/event/", 
+    "Color" : "#ACC95B", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "asDAS", 
+    "name" : "nguyen van de", 
+    "date" : "2018-06-24", 
+    "place" : "sadasd", 
+    "time" : "02:00", 
+    "ImageUrl" : "hinh1.jpg", 
+    "ThumbnailUrl" : "hinh2.jpg", 
+    "created_at" : ISODate("2018-06-24T15:51:27.853+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b2fbf856d027b2828f71891"), 
+    "linkEvent" : "http://localhost:3000/event/", 
+    "Color" : "#ff8040", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "asDAS", 
+    "name" : "nguyenasdasdasd", 
+    "date" : "3222-02-24", 
+    "place" : "sadasd", 
+    "time" : "02:59", 
+    "ImageUrl" : "hinh1.jpg", 
+    "ThumbnailUrl" : "hinh2.jpg", 
+    "created_at" : ISODate("2018-06-24T15:57:57.027+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b2fc61e5ef6d53fcc3d6e4e"), 
+    "linkEvent" : "http://localhost:3000/event/", 
+    "Color" : "#0000ff", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "asDAS", 
+    "name" : "nguyen van de", 
+    "date" : "2018-06-24", 
+    "place" : "sadasd", 
+    "time" : "01:00", 
+    "ImageUrl" : "hinh1.jpg", 
+    "ThumbnailUrl" : "hinh2.jpg", 
+    "created_at" : ISODate("2018-06-24T16:26:06.167+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b315576d790d542b4cd085e"), 
+    "linkevent" : "", 
+    "color" : "#ff8040", 
+    "active" : false, 
+    "guest" : [
+
+    ], 
+    "title" : "asDAS", 
+    "description" : "asdasdasd abc", 
+    "name" : "nguyen van de", 
+    "date" : "2018-06-26", 
+    "place" : "sadasd", 
+    "time" : "02:00", 
+    "thumbnailurl" : "hinhanh2.jpg", 
+    "created_at" : ISODate("2018-06-25T20:49:58.998+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b33053577bdd61d985b7128"), 
+    "linkevent" : "", 
+    "color" : "#ACC95B", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "", 
+    "description" : "xcasca", 
+    "name" : "adasd", 
+    "date" : "2018-06-27", 
+    "place" : "sadasd", 
+    "time" : "10:31", 
+    "created_at" : ISODate("2018-06-27T03:32:05.630+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b33055577bdd61d985b7129"), 
+    "linkevent" : "", 
+    "color" : "#ACC95B", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "", 
+    "description" : "xcasca", 
+    "name" : "adasd", 
+    "date" : "2018-06-27", 
+    "place" : "sadasd", 
+    "time" : "10:31", 
+    "created_at" : ISODate("2018-06-27T03:32:37.015+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5b33057177bdd61d985b712a"), 
+    "linkevent" : "", 
+    "color" : "#ACC95B", 
+    "active" : true, 
+    "guest" : [
+
+    ], 
+    "title" : "", 
+    "description" : "xcasca", 
+    "name" : "adasd", 
+    "date" : "2018-06-27", 
+    "place" : "sadasd", 
+    "time" : "10:31", 
+    "created_at" : ISODate("2018-06-27T03:33:05.176+0000"), 
+    "__v" : NumberInt(0)
+}

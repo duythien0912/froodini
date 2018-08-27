@@ -1,0 +1,38 @@
+{
+  "name": "shop-api",
+  "version": "1.0.0",
+  "engines": {
+    "node": "9.9.0",
+    "yarn": ">=1.5.1"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "npm install pm2 -g",
+    "start": "pm2-runtime dist/index.js -i max"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.4.0",
+    "fs-extra": "^5.0.0",
+    "helmet": "^3.12.0",
+    "jsonwebtoken": "^8.1.1",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.4",
+    "mongoose-unique-validator": "^2.0.0",
+    "nodemailer": "^4.4.2",
+    "normalizr": "^3.2.4",
+    "request-promise": "^4.2.2",
+    "reselect": "^3.0.1",
+    "resize-image": "^0.1.0",
+    "sharp": "^0.20.1",
+    "uuid": "^3.2.1",
+    "xml2js": "^0.4.19"
+  }
+}

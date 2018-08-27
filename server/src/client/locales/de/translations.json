@@ -1,0 +1,82 @@
+{
+  "next": "weiter",
+  "NavBar": {
+    "title": "Wählen Sie eine Kategorie",
+    "title2": "Das wars! Hier ist deine Übersicht."
+  },
+  "HostPage": {
+    "Host": "Organisator",
+    "Participant": "Teilnehmer"
+  },
+  "LandingPage": {
+    "textHero": "Plane Speisen und Getränke für dein Event in nur wenigen Klicks.",
+    "textCamera": "Füge ein Bild hinzu.",
+    "defaulTitle": "Hallo !",
+    "defaulDescrition": "Beschreibe deine Veranstaltung in wenigen Worten deinen Freunden.",
+    "limitTextDescrition": "280 Zeichen",
+    "defaulInputName": "Dein Name",
+    "defaultInputDate": "Datum Ihrer Veranstaltung",
+    "defaulInputPlace": "Ort der Veranstaltung",
+    "defaultInputTime": "Zeitpunkt Ihrer Veranstaltung",
+    "description": "Viel Spaß bei der weiteren Organisation!",
+    "inputerror": {
+      "name": "Der Name darf nicht leer sein.",
+      "place": "Der Ort darf nicht leer sein.",
+      "date": "Das Datum darf nicht leer sein.",
+      "time": "Die Zeit darf nicht leer sein.",
+      "message": "Die Nachricht darf nicht leer sein."
+    },
+    "HowItWorks": "Und so funktionierts!",
+    "AddYour": "Vervollständige Deine Veranstaltungsdetails.",
+    "SelectYour": "Wähle die Art der Veranstaltung, wie z.B.: Brunchen, Grillen oder Picknicken.",
+    "share": "Teilen die Veranstaltung mit deinen Freunden.",
+    "FroodiniWill": "Froodini erstellt basierend auf deiner aussgewählten Art der Veranstaltung verschiedene Vorschläge für Speisen und Getränke für deine Gäste.",
+    "TheyJust": "Deine Freunde müssen nur noch auswählen, was sie gern mitbringen.",
+    "FroodiniPlan": "Froodini, einfach geplant :)",
+    "MoreForm": {
+      "Feedback": "Feedback benötigt!",
+      "text1": "Derzeit arbeiten nur drei Leute an diesem tollen Projekt. Wir hoffen es gefällt dir!",
+      "text2": "Damit wir uns noch schneller entwickeln könne, freuen wir uns über jegliche Ideen! Schreibe uns also gern!",
+      "thank": "Vielen Dank für deine Rückmeldung! Deine Nachricht wurde an uns übermittelt."
+    }
+  },
+  "ChoosePage": {
+    "category1": "Sommerzeit.",
+    "category2": "Kategorie B",
+    "text1": "Wähle ein Event-Typ aus und teile es mit deinen Freunden. Froodini wird alles weitere koordinieren.",
+    "text2": "BBQ ipsum dolor sit amet, concepteur sadipscing elitr, sed diam nonumy eirmod tempor invidutunt ut labore et dolor magna aliquyam erat, sed diam voluptua. Bei vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, kein Meer takimata sanctus est Lorem ipsum",
+    "createAndShare": "Erstellen und teilen",
+    "more": "Mehr",
+    "OwnCreation": "Eigene Kreation"
+  },
+  "EventPage": {
+    "jumpDirectly": "Direkt zur Übersicht wechseln",
+    "textHero": "Plane Speisen und Getränke für deine Veranstaltung in nur wenigen Klicks.",
+    "bottomForm": "Viel Spaß bei der weiteren Organisation!",
+    "JustSelect": "Wählen aus, was du für die oben gennante Veranstaltung mitbringen möchtest.",
+    "HaveFun": "Habe Spaß!",
+    "invitedMessage": "Du wurdest von <0>name</0> zu einem <1>category</1> eingladen. Froodini hilft euch bei der weiteren Speisen und Getränkeplanung.",
+    "txtContent": "Was bringst du mit?"
+  },
+  "FormOwn": {
+    "ForHow": "Für wie viele Personen bringst du das Gericht mit?"
+  },
+  "Feedback": {
+    "inputerror": {
+      "name": "Der Name darf nicht leer sein.",
+      "message": "Die Nachricht darf nicht leer sein."
+    }
+  },
+  "EventSelectPage": {
+    "item": {
+      "offer": "Ist schon vorbei gebracht",
+      "bring": "Wie viele Leute bringst du mit?"
+    },
+    "button1Text": "Bringen",
+    "button2Text": "Ich besuche, kann aber nichts bringen.",
+    "button3Text": "Leider kann ich überhaupt nicht teilnehmen."
+  },
+  "EventFinishPage": {
+    "peopleBring": "... und was bringen andere Leute mit ?"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "next": "next",
+  "NavBar": {
+    "title": "Choose your Category",
+    "title2": "That’s it! Here is your overview."
+  },
+  "HostPage": {
+    "Host": "Host",
+    "Participant": "Participant"
+  },
+  "LandingPage": {
+    "textHero": "Plan food and drinks with your friends in just a few clicks.",
+    "textCamera": "Add a Picture",
+    "defaulTitle": "Hey !",
+    "defaulDescrition": "Describe your event to your friends in a few words.",
+    "limitTextDescrition": "280 signs",
+    "defaulInputName": "Your Name",
+    "defaultInputDate": "Date of your event",
+    "defaulInputPlace": "Place of your event",
+    "defaultInputTime": "Time of your event",
+    "description": "Have fun with further planing!",
+    "inputerror": {
+      "name": "Name can't be blank.",
+      "place": "Place can't be blank.",
+      "date": "Date can't be blank.",
+      "time": "Time can't be blank.",
+      "message": "Message can't be blank."
+    },
+    "HowItWorks": "And that's how it works!",
+    "AddYour": "Add your event details.",
+    "SelectYour": "Select your type of event, e.g.: Brunch, BBQ, Picnic.",
+    "share": "Share your event.",
+    "FroodiniWill": "Froodini will create food and beverage suggestions for your friends based on the selected type of event.",
+    "TheyJust": "Your friends just need to choose, what they want to bring.",
+    "FroodiniPlan": "Froodini, plan the easy way :)",
+    "MoreForm": {
+      "Feedback": "Feedback needed!",
+      "text1": "Currently, only three people are working on this nice project. We hope you like it a lot!",
+      "text2": "To move even faster, please let us know what else you need! We are more than happy to receive any of your ideas!",
+      "thank": "Thanks for sending us Feedback! Your message was send."
+    }
+  },
+  "ChoosePage": {
+    "category1": "Summertime.",
+    "category2": "Category B",
+    "text1": "Select this Food-Event and share it with your friends. Froodini will coordinate everything else.",
+    "text2": "BBQ ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum",
+    "createAndShare": "Create & Share",
+    "more": "More",
+    "OwnCreation": "Own Creation"
+  },
+  "EventPage": {
+    "jumpDirectly": "Jump directly to the overview.",
+    "textHero": "Plan food and drinks with your friends in just a few clicks.",
+    "bottomForm": "Have fun with further planning!",
+    "JustSelect": "Just select your favorit food or drink which you would like to bring for the above shown event.",
+    "HaveFun": "Get an overview and have fun!",
+    "invitedMessage": "You were invited for a <1>category</1> by <0>name</0>.Froodini helps you with further food and beverage planning.",
+    "txtContent": "What do you bring?"
+  },
+  "FormOwn": {
+    "ForHow": "For how many people your will bring the dish?"
+  },
+  "Feedback": {
+    "inputerror": {
+      "name": "Name can't be blank.",
+      "message": "Message can't be blank."
+    }
+  },
+  "EventSelectPage": {
+    "item": {
+      "offer": "Is already brought by",
+      "bring": "For how many people you bring"
+    },
+    "button1Text": "Bring",
+    "button2Text": "I attend, but cannot bring something.",
+    "button3Text": "Unfortunately I cannot attend at all."
+  },
+  "EventFinishPage": {
+    "peopleBring": "... and what do other people bring ?"
+  }
+}
