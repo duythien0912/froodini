@@ -36,7 +36,8 @@ const styles = theme => ({
     borderRadius: '50%',
     boxShadow: '5px 6px 11px rgba(0, 0, 0, 0.3)',
     cursor: 'pointer',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    padding: '0 !important',
   },
   imgCrane: {
     height: '33w',
@@ -169,6 +170,16 @@ const styles = theme => ({
   },
   paper: {
     margin: theme.spacing.unit
-  }
+  },
+
+ExpansionPanel__Card: {
+  backgroundColor: '#f7f7f7',
+  boxShadow: 'none',
+},
+ExpansionPanelDetails__Card: {
+  // marginLeft: '-48vw'
+
+}
+
 });
 export default styles;

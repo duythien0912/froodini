@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { withStyles } from 'material-ui/styles';
+import ExpansionPanel from 'material-ui/ExpansionPanel';
+import ExpansionPanelSummary from 'material-ui/ExpansionPanel/ExpansionPanelSummary';
+import ExpansionPanelDetails from 'material-ui/ExpansionPanel/ExpansionPanelDetails';
+import Grid from 'material-ui/Grid';
 
 import { connect } from '../store';
 import styles from '../Style/FormUseFul';
@@ -8,19 +12,18 @@ import check from '../../img/check.png';
 class FormUseFul extends Component {
   state = {
     itemState: null,
-    heightItem: 0
+    heightItem: 0,
+    expanded: []
   };
   componentDidMount = async () => {
     await this.props.actions.getItem();
   };
-  onClickImg = itemState => {
+  onClickImg = (_id) => {
     this.setState({
-      itemState
-    });
-    const heightItem = this.imgItemElement
-      ? this.imgItemElement.clientHeight
-      : 0;
-    this.setState({ heightItem });
+
+      expanded:  [...new Set([...this.state.expanded,...[_id] ])],
+    })
+  
   };
 
   onClickMore = () => {
@@ -29,50 +32,31 @@ class FormUseFul extends Component {
     });
   };
   render() {
-    const { itemState, heightItem } = this.state;
     const { item, classes } = this.props;
     return (
       <div>
+
+              
         <div className={classes.flex}>
           {item.map(
             (data, i) =>
-              i % 2 === 0 ? (
-                <div
-                  key={`${data._id}`}
-                  className={classes.imgflex}
-                  ref={divElement => {
-                    this.divElement = divElement;
-                  }}
-                  style={
-                    itemState === `itemState${i}`
-                      ? { height: heightItem + 200 }
-                      : {}
-                  }
-                >
-                  <div
-                    className={classes.imgDiv}
-                    onClick={() => this.onClickImg(`itemState${i}`)}
-                    role="presentation"
-                  >
-                    <img
+            (
+              <Grid item xs={6} justify="center"
+              alignItems="center"
+            >
+    
+              <div key={i}>
+              <ExpansionPanel className={classes.ExpansionPanel__Card} onChange={this.onClickImg(data._id)}>
+              
+              <ExpansionPanelSummary>
+                <div>
+                <img
                       src={data.picture}
                       alt="dish2"
                       className={classes.img}
-                      ref={imgItemElement => {
-                        this.imgItemElement = imgItemElement;
-                      }}
                     />
-                    <p className={classes.pflex}>{data.header}</p>
-                  </div>
-                  <div
-                    ref={divItemElement => {
-                      this.divItemElement = divItemElement;
-                    }}
-                  >
-                    {itemState === `itemState${i}` ? (
-                      <div>
-                        <div>
-                          <img
+
+                   <img
                             src={check}
                             alt="check"
                             className={`${classes.img} ${
@@ -95,139 +79,226 @@ class FormUseFul extends Component {
                               width: this.state.heightItem / 3
                             }}
                           />
-                        </div>
-
-                        <div
-                          className={classes.bringForm}
-                          style={{ top: this.state.heightItem + 50 }}
+                </div>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails>
+                         <div className={classes.ExpansionPanelDetails__Card}
                         >
                           <p>{data.description}</p>
                           <br />
 
                           <p>
-                            {data.showItemPrice ? data.price : ''}
+                            {data.showitemprice ? data.price : ''}
                           </p>
                           <br />
 
                           <a
-                            href={data.link ? data.link : '#0'}
-                            className={classes.formbutton}
-                            style={{
-                              lineHeight: '50px',
-                              textAlign: 'center',
-                              marginRight: '0',
-                              boxShadow: 'none',
-                              fontSize: '12px',
-                              height: '50px'
-                            }}
+                            href={data.link || '#0'}
+                            
                             target="_blank"
                           >
-                            {data.buttonText}
+                            {data.buttonText || 'link'}
                           </a>
                           <br />
-                        </div>
-                      </div>
-                    ) : (
-                      ''
-                    )}
-                  </div>
-                </div>
-              ) : (
-                <div
-                  key={`${data._id}`}
-                  className={classes.imgflex}
-                  ref={divElement => {
-                    this.divElement = divElement;
-                  }}
-                  style={
-                    itemState === `itemState${i}`
-                      ? { height: heightItem + 200 }
-                      : {}
-                  }
-                >
-                  <div
-                    className={classes.imgDiv}
-                    onClick={() => this.onClickImg(`itemState${i}`)}
-                    role="presentation"
-                  >
-                    <img
-                      src={data.picture}
-                      alt="dish2"
-                      className={classes.img}
-                      ref={imgItemElement => {
-                        this.imgItemElement = imgItemElement;
-                      }}
-                    />
-                    <p className={classes.pflex}>{data.header}</p>
-                  </div>
-                  <div
-                    ref={divItemElement => {
-                      this.divItemElement = divItemElement;
-                    }}
-                  >
-                    {itemState === `itemState${i}` ? (
-                      <div>
-                        <div>
-                          <img
-                            src={check}
-                            alt="check"
-                            className={`${classes.img} ${
-                              classes.img2
-                            }`}
-                            style={{
-                              bottom: this.state.heightItem + 37
-                            }}
-                            onClick={this.onClickMore}
-                            role="presentation"
-                          />
-                          <hr
-                            style={{
-                              position: 'relative',
-                              bottom:
-                                this.state.heightItem * 4 / 3 + 25,
-                              left: 0,
-                              width: this.state.heightItem / 3
-                            }}
-                          />
-                        </div>
+                        </div>              </ExpansionPanelDetails>
+            </ExpansionPanel>
+            </div>
+            </Grid>
 
-                        <div
-                          className={classes.bringFormOdd}
-                          style={{ top: this.state.heightItem + 50 }}
-                        >
-                          <p>{data.description}</p>
-                          <br />
+            )
+              // i % 2 === 0 ? (
+              //   <div
+              //     key={`${data._id}`}
+              //     className={classes.imgflex}
+              //     ref={divElement => {
+              //       this.divElement = divElement;
+              //     }}
+              //     style={
+              //       itemState === `itemState${i}`
+              //         ? { height: heightItem + 200 }
+              //         : {}
+              //     }
+              //   >
+              //     <div
+              //       className={classes.imgDiv}
+              //       onClick={() => this.onClickImg(`itemState${i}`)}
+              //       role="presentation"
+              //     >
+              //       <img
+              //         src={data.picture}
+              //         alt="dish2"
+              //         className={classes.img}
+              //         ref={imgItemElement => {
+              //           this.imgItemElement = imgItemElement;
+              //         }}
+              //       />
+              //       <p className={classes.pflex}>{data.header}</p>
+              //     </div>
+              //     <div
+              //       ref={divItemElement => {
+              //         this.divItemElement = divItemElement;
+              //       }}
+              //     >
+              //       {itemState === `itemState${i}` ? (
+              //         <div>
+              //           <div>
+              //             <img
+              //               src={check}
+              //               alt="check"
+              //               className={`${classes.img} ${
+              //                 classes.img2
+              //               }`}
+              //               style={{
+              //                 bottom: this.state.heightItem + 38,
+              //                 height: "33.1vw",
+              //                 width: "33.1vw",
+              //               }}
+              //               onClick={this.onClickMore}
+              //               role="presentation"
+              //             />
+              //             <hr
+              //               style={{
+              //                 position: 'relative',
+              //                 bottom:
+              //                   this.state.heightItem * 4 / 3 + 25,
+              //                 left: 0,
+              //                 width: this.state.heightItem / 3
+              //               }}
+              //             />
+              //           </div>
 
-                          <p>
-                            {data.showItemPrice ? data.price : ''}
-                          </p>
-                          <br />
+              //           <div
+              //             className={classes.bringForm}
+              //             style={{ top: this.state.heightItem + 50 }}
+              //           >
+              //             <p>{data.description}</p>
+              //             <br />
 
-                          <a
-                            href={data.link ? data.link : '#0'}
-                            className={classes.formbutton}
-                            style={{
-                              lineHeight: '50px',
-                              textAlign: 'center',
-                              marginRight: '0',
-                              boxShadow: 'none',
-                              fontSize: '12px',
-                              height: '50px'
-                            }}
-                            target="_blank"
-                          >
-                            {data.buttonText}
-                          </a>
-                          <br />
-                        </div>
-                      </div>
-                    ) : (
-                      ''
-                    )}
-                  </div>
-                </div>
-              )
-          )}
+              //             <p>
+              //               {data.showItemPrice ? data.price : ''}
+              //             </p>
+              //             <br />
+
+              //             <a
+              //               href={data.link ? data.link : '#0'}
+              //               className={classes.formbutton}
+              //               style={{
+              //                 lineHeight: '50px',
+              //                 textAlign: 'center',
+              //                 marginRight: '0',
+              //                 boxShadow: 'none',
+              //                 fontSize: '12px',
+              //                 height: '50px'
+              //               }}
+              //               target="_blank"
+              //             >
+              //               {data.buttonText}
+              //             </a>
+              //             <br />
+              //           </div>
+              //         </div>
+              //       ) : (
+              //         ''
+              //       )}
+              //     </div>
+              //   </div>
+              // ) : (
+              //   <div
+              //     key={`${data._id}`}
+              //     className={classes.imgflex}
+              //     ref={divElement => {
+              //       this.divElement = divElement;
+              //     }}
+              //     style={
+              //       itemState === `itemState${i}`
+              //         ? { height: heightItem + 200 }
+              //         : {}
+              //     }
+              //   >
+              //     <div
+              //       className={classes.imgDiv}
+              //       onClick={() => this.onClickImg(`itemState${i}`)}
+              //       role="presentation"
+              //     >
+              //       <img
+              //         src={data.picture}
+              //         alt="dish2"
+              //         className={classes.img}
+              //         ref={imgItemElement => {
+              //           this.imgItemElement = imgItemElement;
+              //         }}
+              //       />
+              //       <p className={classes.pflex}>{data.header}</p>
+              //     </div>
+              //     <div
+              //       ref={divItemElement => {
+              //         this.divItemElement = divItemElement;
+              //       }}
+              //     >
+              //       {itemState === `itemState${i}` ? (
+              //         <div>
+              //           <div>
+              //             <img
+              //               src={check}
+              //               alt="check"
+              //               className={`${classes.img} ${
+              //                 classes.img2
+              //               }`}
+              //               style={{
+              //                 bottom: this.state.heightItem + 37
+              //               }}
+              //               onClick={this.onClickMore}
+              //               role="presentation"
+              //             />
+              //             <hr
+              //               style={{
+              //                 position: 'relative',
+              //                 bottom:
+              //                   this.state.heightItem * 4 / 3 + 25,
+              //                 left: 0,
+              //                 width: this.state.heightItem / 3
+              //               }}
+              //             />
+              //           </div>
+
+              //           <div
+              //             className={classes.bringFormOdd}
+              //             style={{ top: this.state.heightItem + 50 }}
+              //           >
+              //             <p>{data.description}</p>
+              //             <br />
+
+              //             <p>
+              //               {data.showItemPrice ? data.price : ''}
+              //             </p>
+              //             <br />
+
+              //             <a
+              //               href={data.link ? data.link : '#0'}
+              //               className={classes.formbutton}
+              //               style={{
+              //                 lineHeight: '50px',
+              //                 textAlign: 'center',
+              //                 marginRight: '0',
+              //                 boxShadow: 'none',
+              //                 fontSize: '12px',
+              //                 height: '50px'
+              //               }}
+              //               target="_blank"
+              //             >
+              //               {data.buttonText}
+              //             </a>
+              //             <br />
+              //           </div>
+              //         </div>
+              //       ) : (
+              //         ''
+              //       )}
+              //     </div>
+              //   </div>
+              // )
+          )
+          }
         </div>
       </div>
     );
